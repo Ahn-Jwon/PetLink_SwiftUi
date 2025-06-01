@@ -1,0 +1,683 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		022657F42D7D758F003CAC45 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 022657F32D7D758F003CAC45 /* Alamofire */; };
+		022657F72D7D8F07003CAC45 /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = 022657F62D7D8F07003CAC45 /* GooglePlaces */; };
+		022657F92D7D8F07003CAC45 /* GooglePlacesSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 022657F82D7D8F07003CAC45 /* GooglePlacesSwift */; };
+		0288242C2D53057D004AC794 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0288242B2D53057D004AC794 /* FirebaseAuth */; };
+		0288242E2D53057D004AC794 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0288242D2D53057D004AC794 /* FirebaseFirestore */; };
+		028824302D53057D004AC794 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0288242F2D53057D004AC794 /* FirebaseStorage */; };
+		0288246F2D53171B004AC794 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0288246E2D53171B004AC794 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02E377182D475790004DD111 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02E376FF2D47578E004DD111 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02E377062D47578E004DD111;
+			remoteInfo = Pet;
+		};
+		02E377222D475790004DD111 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02E376FF2D47578E004DD111 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02E377062D47578E004DD111;
+			remoteInfo = Pet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02E377072D47578E004DD111 /* Pet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02E377172D475790004DD111 /* PetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02E377212D475790004DD111 /* PetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		02621D432D7D73E0008EA9FE /* Exceptions for "Pet" folder in "Pet" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 02E377062D47578E004DD111 /* Pet */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		02E377092D47578E004DD111 /* Pet */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				02621D432D7D73E0008EA9FE /* Exceptions for "Pet" folder in "Pet" target */,
+			);
+			path = Pet;
+			sourceTree = "<group>";
+		};
+		02E3771A2D475790004DD111 /* PetTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PetTests;
+			sourceTree = "<group>";
+		};
+		02E377242D475790004DD111 /* PetUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PetUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02E377042D47578E004DD111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				022657F42D7D758F003CAC45 /* Alamofire in Frameworks */,
+				0288246F2D53171B004AC794 /* Kingfisher in Frameworks */,
+				022657F92D7D8F07003CAC45 /* GooglePlacesSwift in Frameworks */,
+				0288242C2D53057D004AC794 /* FirebaseAuth in Frameworks */,
+				022657F72D7D8F07003CAC45 /* GooglePlaces in Frameworks */,
+				0288242E2D53057D004AC794 /* FirebaseFirestore in Frameworks */,
+				028824302D53057D004AC794 /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02E377142D475790004DD111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02E3771E2D475790004DD111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02E376FE2D47578E004DD111 = {
+			isa = PBXGroup;
+			children = (
+				02E377092D47578E004DD111 /* Pet */,
+				02E3771A2D475790004DD111 /* PetTests */,
+				02E377242D475790004DD111 /* PetUITests */,
+				02E377082D47578E004DD111 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02E377082D47578E004DD111 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02E377072D47578E004DD111 /* Pet.app */,
+				02E377172D475790004DD111 /* PetTests.xctest */,
+				02E377212D475790004DD111 /* PetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02E377062D47578E004DD111 /* Pet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02E3772B2D475790004DD111 /* Build configuration list for PBXNativeTarget "Pet" */;
+			buildPhases = (
+				02E377032D47578E004DD111 /* Sources */,
+				02E377042D47578E004DD111 /* Frameworks */,
+				02E377052D47578E004DD111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				02E377092D47578E004DD111 /* Pet */,
+			);
+			name = Pet;
+			packageProductDependencies = (
+				0288242B2D53057D004AC794 /* FirebaseAuth */,
+				0288242D2D53057D004AC794 /* FirebaseFirestore */,
+				0288242F2D53057D004AC794 /* FirebaseStorage */,
+				0288246E2D53171B004AC794 /* Kingfisher */,
+				022657F32D7D758F003CAC45 /* Alamofire */,
+				022657F62D7D8F07003CAC45 /* GooglePlaces */,
+				022657F82D7D8F07003CAC45 /* GooglePlacesSwift */,
+			);
+			productName = Pet;
+			productReference = 02E377072D47578E004DD111 /* Pet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		02E377162D475790004DD111 /* PetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02E3772E2D475790004DD111 /* Build configuration list for PBXNativeTarget "PetTests" */;
+			buildPhases = (
+				02E377132D475790004DD111 /* Sources */,
+				02E377142D475790004DD111 /* Frameworks */,
+				02E377152D475790004DD111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02E377192D475790004DD111 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				02E3771A2D475790004DD111 /* PetTests */,
+			);
+			name = PetTests;
+			packageProductDependencies = (
+			);
+			productName = PetTests;
+			productReference = 02E377172D475790004DD111 /* PetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		02E377202D475790004DD111 /* PetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02E377312D475790004DD111 /* Build configuration list for PBXNativeTarget "PetUITests" */;
+			buildPhases = (
+				02E3771D2D475790004DD111 /* Sources */,
+				02E3771E2D475790004DD111 /* Frameworks */,
+				02E3771F2D475790004DD111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02E377232D475790004DD111 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				02E377242D475790004DD111 /* PetUITests */,
+			);
+			name = PetUITests;
+			packageProductDependencies = (
+			);
+			productName = PetUITests;
+			productReference = 02E377212D475790004DD111 /* PetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02E376FF2D47578E004DD111 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					02E377062D47578E004DD111 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					02E377162D475790004DD111 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 02E377062D47578E004DD111;
+					};
+					02E377202D475790004DD111 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 02E377062D47578E004DD111;
+					};
+				};
+			};
+			buildConfigurationList = 02E377022D47578E004DD111 /* Build configuration list for PBXProject "Pet" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02E376FE2D47578E004DD111;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0288242A2D53057D004AC794 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0288246D2D53171B004AC794 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				022657F22D7D758F003CAC45 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				022657F52D7D8F07003CAC45 /* XCRemoteSwiftPackageReference "ios-places-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 02E377082D47578E004DD111 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02E377062D47578E004DD111 /* Pet */,
+				02E377162D475790004DD111 /* PetTests */,
+				02E377202D475790004DD111 /* PetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02E377052D47578E004DD111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02E377152D475790004DD111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02E3771F2D475790004DD111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02E377032D47578E004DD111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02E377132D475790004DD111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02E3771D2D475790004DD111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02E377192D475790004DD111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02E377062D47578E004DD111 /* Pet */;
+			targetProxy = 02E377182D475790004DD111 /* PBXContainerItemProxy */;
+		};
+		02E377232D475790004DD111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02E377062D47578E004DD111 /* Pet */;
+			targetProxy = 02E377222D475790004DD111 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02E377292D475790004DD111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		02E3772A2D475790004DD111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02E3772C2D475790004DD111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pet/Preview Content\"";
+				DEVELOPMENT_TEAM = SB5D7JM5S5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pet/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jw.Pet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02E3772D2D475790004DD111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pet/Preview Content\"";
+				DEVELOPMENT_TEAM = SB5D7JM5S5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pet/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jw.Pet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		02E3772F2D475790004DD111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SB5D7JM5S5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pet";
+			};
+			name = Debug;
+		};
+		02E377302D475790004DD111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SB5D7JM5S5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pet";
+			};
+			name = Release;
+		};
+		02E377322D475790004DD111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SB5D7JM5S5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pet;
+			};
+			name = Debug;
+		};
+		02E377332D475790004DD111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SB5D7JM5S5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02E377022D47578E004DD111 /* Build configuration list for PBXProject "Pet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02E377292D475790004DD111 /* Debug */,
+				02E3772A2D475790004DD111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02E3772B2D475790004DD111 /* Build configuration list for PBXNativeTarget "Pet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02E3772C2D475790004DD111 /* Debug */,
+				02E3772D2D475790004DD111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02E3772E2D475790004DD111 /* Build configuration list for PBXNativeTarget "PetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02E3772F2D475790004DD111 /* Debug */,
+				02E377302D475790004DD111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02E377312D475790004DD111 /* Build configuration list for PBXNativeTarget "PetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02E377322D475790004DD111 /* Debug */,
+				02E377332D475790004DD111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		022657F22D7D758F003CAC45 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		022657F52D7D8F07003CAC45 /* XCRemoteSwiftPackageReference "ios-places-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-places-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.3.0;
+			};
+		};
+		0288242A2D53057D004AC794 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
+			};
+		};
+		0288246D2D53171B004AC794 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		022657F32D7D758F003CAC45 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 022657F22D7D758F003CAC45 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		022657F62D7D8F07003CAC45 /* GooglePlaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 022657F52D7D8F07003CAC45 /* XCRemoteSwiftPackageReference "ios-places-sdk" */;
+			productName = GooglePlaces;
+		};
+		022657F82D7D8F07003CAC45 /* GooglePlacesSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 022657F52D7D8F07003CAC45 /* XCRemoteSwiftPackageReference "ios-places-sdk" */;
+			productName = GooglePlacesSwift;
+		};
+		0288242B2D53057D004AC794 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0288242A2D53057D004AC794 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		0288242D2D53057D004AC794 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0288242A2D53057D004AC794 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		0288242F2D53057D004AC794 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0288242A2D53057D004AC794 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		0288246E2D53171B004AC794 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0288246D2D53171B004AC794 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 02E376FF2D47578E004DD111 /* Project object */;
+}
