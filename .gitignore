@@ -1,6 +1,6 @@
 # 민감한 파일
 ApiKey.swift
-Pet/GoogleService-Info.plist
+/Pet/GoogleService-Info.plist
 
 # Xcode 설정
 *.xcuserdata
