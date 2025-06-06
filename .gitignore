@@ -1,0 +1,11 @@
+# 민감한 파일
+ApiKey.swift
+GoogleService-Info.plist
+
+# Xcode 설정
+*.xcuserdata
+*.xcuserstate
+
+# 빌드 폴더
+build/
+DerivedData/
