@@ -1,9 +1,3 @@
-//
-//  ContentView.swift
-//  Pet
-//
-//  Created by 안재원 on 1/27/25.
-//
 import SwiftUI
 
 struct SplashView: View { // 런치스크링 대신 사용.
@@ -43,10 +37,8 @@ struct ContentView: View {
                     }
             } else {
                 if viewModel.currentUser == nil || viewModel.signupFlowActive {
-                    // 로그인 정보가 없으면 로그인 화면
                     LoginView()
                 } else {
-                    // 로그인 정보가 있으면 메인 화면
                     if let user = viewModel.currentUser {
                         MainTabView(user: user)
                     }

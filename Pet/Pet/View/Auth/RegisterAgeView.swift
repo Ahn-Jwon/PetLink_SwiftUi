@@ -1,15 +1,8 @@
-//
-//  RegisterAgeView.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
 
 import SwiftUI
 
-///```
-///User Age 등록
-///```
+
+// MARK: User Age 등록
 struct RegisterAgeView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @Environment(\.dismiss) var dismiss                                  // 오버레이를 닫을 수 있다.

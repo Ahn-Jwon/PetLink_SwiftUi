@@ -1,9 +1,3 @@
-//
-//  ChatRoomView.swift
-//  Pet
-//
-//  Created by 안재원 on 2/12/25.
-//
 
 import SwiftUI
 
@@ -61,16 +55,7 @@ struct ChatRoomView: View {
 }
  
 extension ChatRoomView {
-//    func getChatPartnerName() -> String {
-//         if let firstMessage = viewModel.messages.first {
-//             if firstMessage.senderId != Auth.auth().currentUser?.uid {
-//                 return firstMessage.senderName
-//             }
-//         }
-//         return "Chat" // 기본값
-//     }
-    
-    
+        
     func chat(for message: Message) -> some View {
         VStack(alignment: message.senderId == Auth.auth().currentUser?.uid ? .trailing : .leading, spacing: 4) {
             Text(message.senderName)

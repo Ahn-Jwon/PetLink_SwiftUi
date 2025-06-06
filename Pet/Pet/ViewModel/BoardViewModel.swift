@@ -1,9 +1,3 @@
-//
-//  BoardViewModel.swift
-//  Pet
-//
-//  Created by 안재원 on 2/8/25.
-//
 
 import Foundation
 import SwiftUI
@@ -21,9 +15,9 @@ class BoardViewModel: ObservableObject {
     	
     
     
-    // 전체 게시글 목록 가져오기
+    // MARK: 전체 게시글 목록 가져오기
     @MainActor
-    // 게시글 목록 불러오기
+    // MARK: 게시글 목록 불러오기
        func fetchPosts() async {
            isLoading = true
            errorMessage = nil
@@ -35,7 +29,7 @@ class BoardViewModel: ObservableObject {
            isLoading = false
        }
     
-    // 오늘 날짜 게시글만 가져오기
+    // MARK: 오늘 날짜 게시글만 가져오기
     @MainActor
     func fetchTodayPosts() async {
         isLoading = true
@@ -48,19 +42,19 @@ class BoardViewModel: ObservableObject {
         isLoading = false
     }
     
-    //  오늘 등록된 게시글 개수 가져오기
+    // MARK: 오늘 등록된 게시글 개수 가져오기
     @MainActor
     func fetchTodayPostCount() async {
         do {
             let count = try await boardService.fetchTodayPostCount()
-            self.todayPostCount = count // ✅ UI 업데이트
+            self.todayPostCount = count // UI 업데이트
         } catch {
             print("Error fetching today's post count: \(error)")
         }
     }
     
     
-    // 게시글 삭제
+    // MARK: 게시글 삭제
     @MainActor
     func deletePost(postId: String) async -> Bool {
         isLoading = true
@@ -79,7 +73,7 @@ class BoardViewModel: ObservableObject {
     }
 
     
-    /// 🔹 댓글 가져오기
+    // MARK: 댓글 가져오기
     func loadComments(for boardId: String) {
         Task {
             do {
@@ -93,7 +87,7 @@ class BoardViewModel: ObservableObject {
         }
     }
     
-    /// 🔹 댓글 추가하기
+    // MARK: 댓글 추가하기
     func addComment(to boardId: String, userId: String, userName: String, content: String) {
         Task {
             do {

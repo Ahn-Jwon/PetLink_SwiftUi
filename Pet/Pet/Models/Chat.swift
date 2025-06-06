@@ -1,10 +1,3 @@
-//
-//  Chat.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
-
 import Foundation
 
 
@@ -13,7 +6,7 @@ struct Chat: Identifiable, Codable, Hashable {
     let user1: User
     let user2: User
     
-    static let mockChats: [Chat] = [ //모의 데이터
+    static let mockChats: [Chat] = [ //SAMPLE DATA
         .init(id: NSUUID().uuidString, user1: User.mockUsers[0], user2: User.mockUsers[1]),
         .init(id: NSUUID().uuidString, user1: User.mockUsers[0], user2: User.mockUsers[2]),
         .init(id: NSUUID().uuidString, user1: User.mockUsers[0], user2: User.mockUsers[3]),

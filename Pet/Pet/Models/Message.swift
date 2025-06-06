@@ -1,9 +1,3 @@
-//
-//  Message.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
 
 import Foundation
 import Firebase

@@ -15,7 +15,7 @@ class ChatViewModel: ObservableObject {
     
     // MARK: - Chat Room Operations
     
-    /// 사용자의 채팅방 목록을 불러옴
+    // MARK: 사용자의 채팅방 목록을 불러옴
     func loadUserChatRooms(for userId: String) async {
         do {
             let rooms = try await chatService.fetchUserChatRooms(userId: userId)
@@ -25,7 +25,7 @@ class ChatViewModel: ObservableObject {
         }
     }
     
-    /// 두 사용자 간의 기존 채팅방이 있으면 리턴하고, 없으면 새로 생성합니다.
+    // MARK: 두 사용자 간의 기존 채팅방이 있으면 리턴하고, 없으면 새로 생성
     func getOrCreateChatRoom(userId: String, otherUserId: String, usernames: [String]) async throws -> ChatRoom {
         if let existingRoom = try await chatService.fetchExistingChatRoom(userId: userId, otherUserId: otherUserId) {
             return existingRoom
@@ -34,7 +34,7 @@ class ChatViewModel: ObservableObject {
         }
     }
     
-    /// 특정 채팅방에 참여
+    // MARK: 특정 채팅방에 참여
     func joinChatRoom(userId: String, chatRoomId: String) async {
         do {
             try await chatService.joinChatRoom(userId: userId, chatRoomId: chatRoomId)
@@ -45,7 +45,7 @@ class ChatViewModel: ObservableObject {
     
     // MARK: - Message Operations
     
-    /// 채팅방의 기존 메시지를 한 번 불러옴
+    // MARK: 채팅방의 기존 메시지를 한 번 불러옴
     func loadMessages(chatRoomId: String) async {
         do {
             let msgs = try await chatService.fetchMessages(chatRoomId: chatRoomId)
@@ -55,7 +55,7 @@ class ChatViewModel: ObservableObject {
         }
     }
     
-    /// 채팅방의 메시지를 실시간으로 리스닝
+    // MARK: 채팅방의 메시지를 실시간으로 리스닝
     func listenToMessages(chatRoomId: String) {
         // 기존 리스너 제거
         listener?.remove()
@@ -80,13 +80,13 @@ class ChatViewModel: ObservableObject {
                             }
                     }
     
-    /// 실시간 리스너를 제거
+    // MARK: 실시간 리스너를 제거
     func removeListener() {
         listener?.remove()
         listener = nil
     }
     
-    /// 채팅방에 메시지를 전송
+    // MARK: 채팅방에 메시지를 전송
     func sendMessage(chatRoomId: String, text: String) async {
         do {
             try await chatService.sendMessage(chatRoomId: chatRoomId, text: text)

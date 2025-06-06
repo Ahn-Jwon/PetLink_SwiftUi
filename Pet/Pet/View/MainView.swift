@@ -1,9 +1,3 @@
-//
-//  MainView.swift
-//  Pet
-//
-//  Created by 안재원 on 1/27/25.
-//
 
 import SwiftUI
 import PhotosUI
@@ -21,12 +15,12 @@ struct MainView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 10) {
-                    ZStack(alignment: .top) { // 🔹 ZStack에 상단 정렬 추가
+                    ZStack(alignment: .top) {
                         ImageSliderView()
                     }
                     HStack {
                         Spacer()
-                        if let imageUrl = user.profileImageUrl { // 사용자의 프로필에 이미지가 있을 경우.
+                        if let imageUrl = user.profileImageUrl {
                             KFImage(URL(string: imageUrl))
                                 .resizable()
                                 .scaledToFill()
@@ -48,9 +42,6 @@ struct MainView: View {
                                     .bold()
                             }
                             .buttonStyle(PlainButtonStyle())
-//                            Text("\(user.name) Hello!")
-//                                .foregroundStyle(colorScheme == .dark ? .white : .black)
-//                                .bold()
                         }
                         Image(systemName: "bell.fill")
                             .font(.title2)
@@ -71,8 +62,8 @@ struct MainView: View {
                                     .padding(.horizontal)
 //                                    .padding(.bottom, 3)
                                     .background(
-                                        RoundedRectangle(cornerRadius: 12) // 네모 박스 (둥근 모서리)
-                                            .fill(Color.gray.opacity(0.1)) // 배경색 적용
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .fill(Color.gray.opacity(0.1))
                                     )
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -89,8 +80,8 @@ struct MainView: View {
                                     .cornerRadius(10)
                                     .padding(.horizontal)
                                     .background(
-                                        RoundedRectangle(cornerRadius: 12) // 네모 박스 (둥근 모서리)
-                                            .fill(Color.gray.opacity(0.1)) // 배경색 적용
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .fill(Color.gray.opacity(0.1))
                                     )
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -107,8 +98,8 @@ struct MainView: View {
                                     .cornerRadius(10)
                                     .padding(.horizontal)
                                     .background(
-                                        RoundedRectangle(cornerRadius: 12) // 네모 박스 (둥근 모서리)
-                                            .fill(Color.gray.opacity(0.1)) // 배경색 적용
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .fill(Color.gray.opacity(0.1))
                                     )
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -131,7 +122,7 @@ struct MainView: View {
                     
                     LazyVGrid(columns: columns) {
                         ForEach(viewModel.posts) { item in
-                            NavigationLink(destination: BoardDetailView(board: item)) { // 🔹 NavigationLink 적용
+                            NavigationLink(destination: BoardDetailView(board: item)) { // NavigationLink 적용
                                 VStack(spacing: 0) {
                                     if let imageUrl = item.imageUrl, !imageUrl.isEmpty {
                                         KFImage(URL(string: imageUrl))
@@ -148,7 +139,7 @@ struct MainView: View {
                                 }
 //                                .padding()
                             }
-                            .buttonStyle(PlainButtonStyle()) // 🔹 기본 버튼 스타일 제거 (회색 배경 방지)
+                            .buttonStyle(PlainButtonStyle()) 
                         }
                     }
                 }

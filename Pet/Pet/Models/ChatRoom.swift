@@ -1,20 +1,7 @@
-//
-//  ChatRoom.swift
-//  Pet
-//
-//  Created by 안재원 on 2/12/25.
-//
-
 import Foundation
 import Firebase
 import FirebaseFirestore
 
-//struct ChatRoom: Identifiable, Codable {
-//    let id: String
-//    let users: [String]  // 참여한 유저 ID 리스트
-//    let lastMessage: String?
-//    let timestamp: Date?
-//}
 
 struct ChatRoom: Identifiable, Codable {
     let id: String

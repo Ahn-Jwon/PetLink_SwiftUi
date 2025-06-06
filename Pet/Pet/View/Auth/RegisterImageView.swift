@@ -1,17 +1,9 @@
-//
-//  RegisterImageView.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
-
 import SwiftUI
-import PhotosUI                                                           // Image Picker을 사용하려면 이것이 필요하기때문에 임포트를 해줘야 한다.
+import PhotosUI                                                           // Image Picker을
 
 
-///```
-///User ProfileImage Setting
-///```
+
+// MARK: User ProfileImage Setting
 struct RegisterImageVIew: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
@@ -88,9 +80,7 @@ struct RegisterImageVIew: View {
     }
 }
 
-///```
-///환경객체가 없으면 오류가 난다. 참고할 것
-///```
+
 #Preview {
     RegisterImageVIew()
         .environmentObject(AuthViewModel())

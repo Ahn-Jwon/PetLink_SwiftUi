@@ -1,10 +1,3 @@
-//
-//  CommunityViewModel.swift
-//  Pet
-//
-//  Created by 안재원 on 3/14/25.
-//
-
 
 import Foundation
 import SwiftUI
@@ -23,7 +16,7 @@ class CommunityViewModel: ObservableObject {
     
     
     
-    // 전체 게시글 목록 가져오기
+    // MARK: 전체 게시글 목록 가져오기
     @MainActor
     func fetchPosts() async {
         isLoading = true
@@ -37,7 +30,7 @@ class CommunityViewModel: ObservableObject {
         isLoading = false
     }
     
-    // 오늘 날짜 게시글만 가져오기
+    // MARK: 오늘 날짜 게시글만 가져오기
     @MainActor
     func fetchTodayPosts() async {
         isLoading = true
@@ -50,19 +43,19 @@ class CommunityViewModel: ObservableObject {
         isLoading = false
     }
     
-    //  오늘 등록된 게시글 개수 가져오기
+    // MARK:  오늘 등록된 게시글 개수 가져오기
     @MainActor
     func fetchTodayPostCount() async {
         do {
             let count = try await communitydService.fetchTodayPostCount()
-            self.todayPostCount = count // ✅ UI 업데이트
+            self.todayPostCount = count // UI 업데이트
         } catch {
             print("Error fetching today's post count: \(error)")
         }
     }
     
     
-    // 게시글 삭제
+    // MARK: 게시글 삭제
     @MainActor
     func deletePost(postId: String) async -> Bool {
         isLoading = true
@@ -81,7 +74,7 @@ class CommunityViewModel: ObservableObject {
     }
 
     
-    /// 🔹 댓글 가져오기
+    // MARK: 댓글 가져오기
     func loadComments(for boardId: String) {
         Task {
             do {
@@ -95,7 +88,7 @@ class CommunityViewModel: ObservableObject {
         }
     }
     
-    /// 🔹 댓글 추가하기
+    // MARK: 댓글 추가하기
     func addComment(to boardId: String, userId: String, userName: String, content: String) {
         Task {
             do {

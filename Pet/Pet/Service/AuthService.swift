@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
-
 import Foundation
 import Firebase
 import FirebaseFirestore
@@ -12,19 +5,14 @@ import FirebaseAuth
 import SwiftUI
 import PhotosUI
 
-///```
-///기초 인증 서비스
-///firebase와 통신을 수행하는건 일반 API를 URL 연결하는 것 과 비슷하다.
-///백엔드와 통신하는 곳
-///```
 class AuthService: ObservableObject  {
     
-    static let shared = AuthService()                // 인증을 사용하여 통신하려는 모든사람이 엑세스할 변수
-    @Published var userSession: FirebaseAuth.User?   // 사용자가 있을지 없을지 모르기때문에 ? 옵셔널을 사용하여 (이것은 FireBase에서 지원하는 것)
-    @Published var currentUser: User?                // 현재 사용자 있을지 없을지 모르기때문에 옵셔널 사용 (현재사용자는 로컬에 저장한다. 즉 로컬에 저장된 사용자)
-    @Published var isLoading = false                 // 로딩 변수
+    static let shared = AuthService()
+    @Published var userSession: FirebaseAuth.User?
+    @Published var currentUser: User?
+    @Published var isLoading = false
     @Published var errorEnent = PetError(content: "", display: false)
-    @Published var signupFlowActive = false          // 가입등록을 마치면 true로 전환
+    @Published var signupFlowActive = false
     @Published var profileImage: Image?
     private var uiImage: UIImage?
     
@@ -35,13 +23,9 @@ class AuthService: ObservableObject  {
     }
     
     
-    ///```
-    /// 회원가입 (인증) Service
-    /// 백엔드와 통신하므로 비동기 onComplete: () -> ())
-    /// 완료되면 매개변수를 사용하지않고 매개변수를 반환하지 않는 람다
-    /// 비동기 이므로  try await 이걸 넣어줘야 한다.
-    /// 메인쓰레드에서 실행해야 하기때문에 @MainActor
-    /// ```
+    
+    // MARK: 회원가입 (인증) Service
+    
     @MainActor
     func register(withEmail email: String, name: String, password: String, onComplete: () -> ()) async {
         isLoading = true // Loading 시작
@@ -71,9 +55,9 @@ class AuthService: ObservableObject  {
     
     
     
-    ///```
-    ///로그아웃 Service
-    ///```
+    
+    // MARK: 로그아웃 Service
+    
     func signout() {
         userSession = nil
         currentUser = nil
@@ -114,11 +98,10 @@ class AuthService: ObservableObject  {
 
     
     
-    ///```
-    ///로그인 Service
-    ///Main에서 (주인공)실행하도록 지정
-    ///메인쓰레드에서 실행해야 하기때문에 @MainActor
-    ///```
+  
+    // MARK: 로그인 Service
+    // MARK: Main에서 실행하도록 지정
+  
     @MainActor
     func login(withemail email: String, password: String) async {
         isLoading = true
@@ -135,11 +118,9 @@ class AuthService: ObservableObject  {
     }
     
     
-    ///```
-    ///유저 검색 Service
-    ///애플리케이션이 처음 실행할때 이 사용자 가져오기를 실행하고 검색
-    ///메인쓰레드에서 실행해야 하기때문에 @MainActor
-    ///```
+
+    // MARK: 유저 검색 Service
+    // MARK: 애플리케이션이 처음 실행할때 이 사용자 가져오기를 실행하고 검색
     @MainActor
     func fetchUser() async throws {
         userSession = Auth.auth().currentUser
@@ -148,10 +129,8 @@ class AuthService: ObservableObject  {
     }
     
     
-    ///```
-    ///UI Image를 인스턴스화하고 프로필로 설정
-    ///메인쓰레드에서 실행해야 하기때문에 @MainActor
-    ///```
+ 
+    // MARK: UI Image를 인스턴스화하고 프로필로 설정
     @MainActor
     func loadImageFromItem(item: PhotosPickerItem?) async {
         guard let item = item else {return }
@@ -162,9 +141,8 @@ class AuthService: ObservableObject  {
     }
     
     
-    ///```
-    ///Image 저장하기 * 프로필 이미지 *
-    ///```
+    
+    // MARK: Image 저장하기 * 프로필 이미지 *
     @MainActor
     func uploadUserImage() async {
         guard let currentUser = currentUser else { return }
@@ -186,11 +164,10 @@ class AuthService: ObservableObject  {
     }
     
     
-    ///```
-    ///개인 카테고리 저장 인증
-    ///메인쓰레드에서 실행해야 하기때문에 @MainActor
-    ///비동기 함수
-    ///```
+    
+    // MARK: 개인 카테고리 저장 인증
+    // 메인쓰레드에서 실행해야 하기때문에 @MainActor
+    // 비동기 함수
     @MainActor
     func completRegistrationFlow(age: Int, bio: String, gender: PetGender, preference: PetGender, interests: Set<String>) async {
         //현재 사용자가 현재 사용자와 동일하도록 보호하고 그렇지 않으면 반환한다.
@@ -198,7 +175,7 @@ class AuthService: ObservableObject  {
         guard let currentUser = currentUser else { return }
         isLoading = true
         
-        do { // 파이어 베이스에 데이터와 필드가 포함된 배열을 만든다. 배열로 하는 이유는 파이어베이스는 집합이 아닌 배열로 움직인다.
+        do {
             let data = [
                 "age": age,
                 "bio": bio,

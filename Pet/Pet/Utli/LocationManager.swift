@@ -1,9 +1,3 @@
-//
-//  LocationManager.swift
-//  Pet
-//
-//  Created by 안재원 on 2/8/25.
-//
 
 import Foundation
 import CoreLocation
@@ -56,7 +50,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
         }
     }
 
-    // 위치 업데이트 실패 시 호출됩니다.
+    // 위치 업데이트 실패 시 호출
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("위치 업데이트 실패?: \(error.localizedDescription)")
     }

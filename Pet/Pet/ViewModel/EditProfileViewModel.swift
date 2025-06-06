@@ -1,9 +1,3 @@
-//
-//  EditProfileViewModel.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
 
 import Foundation
 import PhotosUI     // 이미지를 가져오기 위해
@@ -47,9 +41,8 @@ class EditProfileViewModel: ObservableObject {
         self.interests = Set(user.interests)
     }
     
-    ///```
-    ///현재 이미지 불러오기
-    ///```
+    
+    // MARK: 현재 이미지 불러오기
     @MainActor
     func loadImageFromItem(item: PhotosPickerItem?) async {
         guard let item = item else {return }
@@ -59,9 +52,8 @@ class EditProfileViewModel: ObservableObject {
         self.profileImage = Image(uiImage : uiImage)            // 프로필이미지 인스턴스 화 -> ViewModel로 전달됨.
     }
     
-    ///```
-    ///프로필 수정 업데이트
-    ///```
+    
+    // MARK: 프로필 수정 업데이트
     @MainActor
     func updateUserData() async throws {
         var data = [String: Any]()

@@ -7,7 +7,7 @@ class ChatService {
     
     // MARK: - Chat Room Methods
     
-    /// 사용자별 채팅방 목록을 가져옴
+    // MARK: 사용자별 채팅방 목록을 가져옴
     func fetchUserChatRooms(userId: String) async throws -> [ChatRoom] {
         let chatListRef = db.collection("chatList").document(userId)
         let snapshot = try await chatListRef.getDocument()
@@ -26,6 +26,7 @@ class ChatService {
         return chatRooms
     }
     
+    // MARK: 사용자간 채팅방 생성
     func createChatRoom(userId: String, otherUserId: String, usernames: [String]) async throws -> ChatRoom {
         let chatRoomsRef = db.collection("chatRooms")
         let newChatRoomRef = chatRoomsRef.document()
@@ -51,7 +52,7 @@ class ChatService {
     }
 
     
-    /// 사용자가 특정 채팅방에 참여할 수 있도록 chatList에 채팅방 ID를 추가
+    // MARK: 사용자가 특정 채팅방에 참여할 수 있도록 chatList에 채팅방 ID를 추가
     func joinChatRoom(userId: String, chatRoomId: String) async throws {
         let chatListRef = db.collection("chatList").document(userId)
         let documentSnapshot = try await chatListRef.getDocument()
@@ -64,7 +65,7 @@ class ChatService {
         try await chatListRef.setData(data, merge: true)
     }
     
-    /// 두 사용자 간의 기존 채팅방이 있는지 확인
+    // MARK: 두 사용자 간의 기존 채팅방이 있는지 확인
     func fetchExistingChatRoom(userId: String, otherUserId: String) async throws -> ChatRoom? {
         let chatRoomsRef = db.collection("chatRooms")
         let querySnapshot = try await chatRoomsRef
@@ -81,8 +82,7 @@ class ChatService {
     }
     
     // MARK: - Message Methods
-    
-    /// 지정한 채팅방에 메시지를 전송하고, 마지막 메시지 정보를 업데이트
+    // 지정한 채팅방에 메시지를 전송하고, 마지막 메시지 정보를 업데이트
     func sendMessage(chatRoomId: String, text: String) async throws {
         // 현재 사용자 uid 확인
         guard let uid = Auth.auth().currentUser?.uid else {
@@ -133,7 +133,7 @@ class ChatService {
         ])
     }
 
-    /// 특정 채팅방의 메시지들을 가져옴
+    // MARK: 특정 채팅방의 메시지들을 가져옴
     func fetchMessages(chatRoomId: String) async throws -> [Message] {
         let messagesRef = db.collection("chatRooms").document(chatRoomId).collection("messages")
         let snapshot = try await messagesRef

@@ -1,10 +1,3 @@
-//
-//  BoardService.swift
-//  Pet
-//
-//  Created by 안재원 on 2/6/25.
-//
-
 import Foundation
 import FirebaseFirestore
 import FirebaseAuth
@@ -17,7 +10,7 @@ class BoardService: ObservableObject {
         private let db = Firestore.firestore()
     
     @MainActor
-    // 게시글 생성
+    // MARK: 게시글 생성
     func createPost(username: String, title: String, content: String, image: UIImage?, location: CLLocationCoordinate2D?) async throws {
         guard let uid = Auth.auth().currentUser?.uid else {
             throw NSError(domain: "AuthError", code: -1, userInfo: [NSLocalizedDescriptionKey: "로그인 필요"])
@@ -55,7 +48,7 @@ class BoardService: ObservableObject {
         try await docRef.setData(postData)
     }
     
-    // Firestore에서 게시글 목록 가져오기
+    // MARK: Firestore에서 게시글 목록 가져오기
     func fetchPosts() async throws -> [Board] {
         let snapshot = try await db.collection(COLLERCTION_BOARD)
             .order(by: "timestamp", descending: true)
@@ -77,12 +70,12 @@ class BoardService: ObservableObject {
             )
         }
     }
-    // AIzaSyDgkxrepywZneifmPOh7Nzq-q0-HcN8WJk
-    // 구글 역지오코딩 API 사용하여 위치 좌표를 주소로 변환
+    
+    // MARK: 구글 역지오코딩 API 사용하여 위치 좌표를 주소로 변환
     private func getAddress(from location: CLLocationCoordinate2D?) async throws -> String {
         guard let location = location else { return "위치 정보 없음" }
-        let apiKey = "AIzaSyDgkxrepywZneifmPOh7Nzq-q0-HcN8WJk" // 🔹 본인의 API 키 입력
-        let urlString = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(location.latitude),\(location.longitude)&key=\(apiKey)"
+        
+        let urlString = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(location.latitude),\(location.longitude)&key=\(ADRESS_API_KYE)"
         
         guard let url = URL(string: urlString) else { return "주소 변환 실패" }
         
@@ -112,7 +105,7 @@ class BoardService: ObservableObject {
         return "주소 정보 없음"
     }
     
-    ///  댓글 가져오기
+    // MARK: 댓글 가져오기
        func fetchComments(for boardId: String) async throws -> [Comment] {
            let snapshot = try await db.collection("comments")
                .whereField("boardId", isEqualTo: boardId)
@@ -132,7 +125,7 @@ class BoardService: ObservableObject {
            }
        }
        
-       /// 댓글 추가하기
+       // MARK: 댓글 추가하기
        func addComment(to boardId: String, userId: String, userName: String, content: String) async throws {
            let newComment = [
                "boardId": boardId,
@@ -147,7 +140,7 @@ class BoardService: ObservableObject {
            
        
     
-    //  오늘 날짜의 게시글만 가져오기
+    // MARK: 오늘 날짜의 게시글만 가져오기
       func fetchTodayPosts() async throws -> [Board] {
           let today = Date()
           let calendar = Calendar.current
@@ -179,7 +172,7 @@ class BoardService: ObservableObject {
           }
       }
     
-    //  오늘 날짜 게시글 개수 가져오기
+    // MARK: 오늘 날짜 게시글 개수 가져오기
        func fetchTodayPostCount() async throws -> Int {
            let today = Date()
            let calendar = Calendar.current
@@ -193,12 +186,12 @@ class BoardService: ObservableObject {
                .whereField("timestamp", isLessThan: Timestamp(date: endOfDay))
                .getDocuments()
            
-           return querySnapshot.documents.count  // ✅ 게시글 개수 반환
+           return querySnapshot.documents.count  // 게시글 개수 반환
        }
    
     
     @MainActor
-    //  UPDATE (게시글 수정)
+    // MARK: UPDATE (게시글 수정)
     func updatePost(postId: String, title: String?, content: String?) async throws {
         guard let uid = Auth.auth().currentUser?.uid else { throw NSError(domain: "AuthError", code: -1, userInfo: nil) }
 
@@ -216,7 +209,7 @@ class BoardService: ObservableObject {
         }
     }
 
-    //  DELETE (게시글 삭제)
+    // MARK: DELETE (게시글 삭제)
     @MainActor
     func deletePost(postId: String) async throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }

@@ -1,10 +1,3 @@
-//
-//  BoardDeatilView.swift
-//  Pet
-//
-//  Created by 안재원 on 2/11/25.
-//
-
 import SwiftUI
 import Kingfisher
 import FirebaseAuth
@@ -18,7 +11,7 @@ struct BoardDetailView: View {
     @State var newComment = ""
     @StateObject var lc = LocationManager()
     @Environment(\.colorScheme) var colorScheme
-//    @Environment(\.dismiss) private var dismiss  // dismiss 환경 변수 추가 이전페이지 돌아가기  이거 키면 채팅메시지 아이콘 이동안됨
+
     
     // 내비게이션 방식으로 채팅방 이동을 위한 상태 변수
     @State private var isChatRoomActive: Bool = false
@@ -153,13 +146,6 @@ struct BoardDetailView: View {
                     viewModel.loadComments(for: boardId)
                 }
             }
-            
-            // NavigationLink를 background에 배치하여 자동으로 페이지 전환되게 함
-//            .background(
-//                NavigationLink(destination: chatRoomDestination,
-//                               isActive: $isChatRoomActive,
-//                               label: { EmptyView() })
-//            )
             .navigationDestination(isPresented: $isDeleted) {
                 BoardView() // 게시글 삭제 후 BoardView로 이동
             }
@@ -202,7 +188,7 @@ extension BoardDetailView {
                     
                     // 프로필 이미지 URL도 배열로 전달 (각각의 값이 nil일 경우 빈 문자열로 대체)
                     let currentUserProfileUrl = authViewModel.currentUser?.profileImageUrl ?? ""
-                    // 기존 채팅방이 있으면 반환하고, 없으면 새로 생성합니다.
+                    // 기존 채팅방이 있으면 반환하고, 없으면 새로 생성
                     let chatRoom = try await chatviewModel.getOrCreateChatRoom(
                         userId: currentUserId,
                         otherUserId: otherUserId,
@@ -210,7 +196,7 @@ extension BoardDetailView {
                     )
                     print("채팅방 획득: \(chatRoom.id)")
                     
-                    // 양쪽 사용자의 chatList에 채팅방을 추가합니다.
+                    // 양쪽 사용자의 chatList에 채팅방을 추가
                     try await chatviewModel.joinChatRoom(userId: currentUserId, chatRoomId: chatRoom.id)
                     print("현재 사용자 채팅방 참여 완료")
                     try await chatviewModel.joinChatRoom(userId: otherUserId, chatRoomId: chatRoom.id)

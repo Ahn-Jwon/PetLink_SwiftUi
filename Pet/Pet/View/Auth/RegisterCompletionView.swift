@@ -1,15 +1,8 @@
-//
-//  RegisterCompletionView.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
 
 import SwiftUI
 
-///```
-///완료 화면
-///```
+
+// MARK: 완료 화면
 struct RegisterCompletionView: View {
     
     @EnvironmentObject var viewModel: AuthViewModel

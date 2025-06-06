@@ -1,10 +1,3 @@
-//
-//  ImageUploder.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//  이미지를 저장하느 코드는 상용코드이기때문헤 이해할 필요 없이 그냥 긁어와서 쓰자
-
 
 import Foundation
 import UIKit

@@ -1,19 +1,11 @@
-//
-//  RegisterView.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
-
 import SwiftUI
 
-///```
-///회원가입
-///```
+
+// MARK: 회원가입
 struct RegisterView: View {
     
     // 환경
-    @State private var startRegistrationFlow = false        // View에서 등록흐름으로 이동할 수 있게해주는 것 (스와이프로 갈지말지)
+    @State private var startRegistrationFlow = false        // View에서 등록흐름으로 이동할 수 있게해주는 것
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var viewModel: AuthViewModel
     

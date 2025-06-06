@@ -1,11 +1,3 @@
-//
-//  CommunityCreatePostView.swift
-//  Pet
-//
-//  Created by 안재원 on 3/14/25.
-//
-
-
 import SwiftUI
 import PhotosUI
 import CoreLocation

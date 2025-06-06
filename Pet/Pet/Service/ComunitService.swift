@@ -1,10 +1,3 @@
-//
-//  ComunitService.swift
-//  Pet
-//
-//  Created by 안재원 on 3/14/25.
-//
-
 import Foundation
 import FirebaseFirestore
 import FirebaseAuth
@@ -16,7 +9,7 @@ class CommunityService: ObservableObject {
     private let db = Firestore.firestore()
     
     @MainActor
-    // 게시글 생성
+    // MARK: 게시글 생성
     func createPost(username: String, title: String, content: String, image: UIImage?, location: CLLocationCoordinate2D?) async throws {
         guard let uid = Auth.auth().currentUser?.uid else {
             throw NSError(domain: "AuthError", code: -1, userInfo: [NSLocalizedDescriptionKey: "로그인 필요"])
@@ -54,7 +47,7 @@ class CommunityService: ObservableObject {
         try await docRef.setData(postData)
     }
     
-    // Firestore에서 게시글 목록 가져오기
+    // MARK: Firestore에서 게시글 목록 가져오기
     func fetchPosts() async throws -> [Community] {
         let snapshot = try await db.collection(COLLERCTION_COMMUNITY)
             .order(by: "timestamp", descending: true)
@@ -76,11 +69,11 @@ class CommunityService: ObservableObject {
             )
         }
     }
-    // AIzaSyDgkxrepywZneifmPOh7Nzq-q0-HcN8WJk
-    // 구글 역지오코딩 API 사용하여 위치 좌표를 주소로 변환
+    
+    // MARK: 구글 역지오코딩 API 사용하여 위치 좌표를 주소로 변환
     private func getAddress(from location: CLLocationCoordinate2D?) async throws -> String {
         guard let location = location else { return "위치 정보 없음" }
-        let apiKey = "AIzaSyDgkxrepywZneifmPOh7Nzq-q0-HcN8WJk" // 🔹 본인의 API 키 입력
+        let apiKey = "AIzaSyDgkxrepywZneifmPOh7Nzq-q0-HcN8WJk" //  본인의 API 키 입력
         let urlString = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(location.latitude),\(location.longitude)&key=\(apiKey)"
         
         guard let url = URL(string: urlString) else { return "주소 변환 실패" }
@@ -97,21 +90,21 @@ class CommunityService: ObservableObject {
 
             for component in addressComponents {
                 if let types = component["types"] as? [String] {
-                    if types.contains("locality") { // 🔹 도시명 (예: Hachioji)
+                    if types.contains("locality") { // 도시명 (예: Hachioji)
                         city = component["long_name"] as? String ?? ""
-                    } else if types.contains("sublocality") { // 🔹 지역명 (예: Katakuramachi)
+                    } else if types.contains("sublocality") { // 지역명 (예: Katakuramachi)
                         district = component["long_name"] as? String ?? ""
                     }
                 }
             }
 
-            return "\(district), \(city)" // 🔹 예: "Katakuramachi, Hachioji"
+            return "\(district), \(city)" // 예: "Katakuramachi, Hachioji"
         }
         
         return "주소 정보 없음"
     }
     
-    /// 🔹 댓글 가져오기
+    // MARK: 댓글 가져오기
     func fetchComments(for boardId: String) async throws -> [Comment] {
         let snapshot = try await db.collection("comments")
             .whereField("boardId", isEqualTo: boardId)
@@ -130,7 +123,7 @@ class CommunityService: ObservableObject {
         }
     }
     
-    /// 🔹 댓글 추가하기
+    // MARK: 댓글 추가하기
     func addComment(to boardId: String, userId: String, userName: String, content: String) async throws {
         let newComment = [
             "boardId": boardId,
@@ -145,7 +138,7 @@ class CommunityService: ObservableObject {
     
     
     
-    //  오늘 날짜의 게시글만 가져오기
+    // MARK: 오늘 날짜의 게시글만 가져오기
     func fetchTodayPosts() async throws -> [Community] {
         let today = Date()
         let calendar = Calendar.current
@@ -176,7 +169,7 @@ class CommunityService: ObservableObject {
         }
     }
     
-    //  오늘 날짜 게시글 개수 가져오기
+    // MARK: 오늘 날짜 게시글 개수 가져오기
     func fetchTodayPostCount() async throws -> Int {
         let today = Date()
         let calendar = Calendar.current
@@ -195,7 +188,7 @@ class CommunityService: ObservableObject {
     
     
     @MainActor
-    //  UPDATE (게시글 수정)
+    // MARK: UPDATE (게시글 수정)
     func updatePost(postId: String, title: String?, content: String?) async throws {
         guard let uid = Auth.auth().currentUser?.uid else { throw NSError(domain: "AuthError", code: -1, userInfo: nil) }
         
@@ -213,7 +206,7 @@ class CommunityService: ObservableObject {
         }
     }
     
-    //  DELETE (게시글 삭제)
+    // MARK: DELETE (게시글 삭제)
     @MainActor
     func deletePost(postId: String) async throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }

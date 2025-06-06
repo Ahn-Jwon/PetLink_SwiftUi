@@ -1,9 +1,3 @@
-//
-//  ProfileView.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
 
 import SwiftUI
 
@@ -11,10 +5,10 @@ import SwiftUI
 import Kingfisher
 
 struct ProfileView: View {
-    var user: User              // 현재사용자인지, 스와이프 카드 사용자 여부 체크
+    var user: User
     var editMode = false       // 편집모드
-    let numberOfPages = 3 // 보여줄 페이지 수
-    @State private var currentIndex = 0 // 현재 페이지 인덱스 추적
+    let numberOfPages = 3
+    @State private var currentIndex = 0
     @Environment(\.dismiss) private var dismiss  // dismiss 환경 변수 추가 이전페이지 돌아가기
     @State private var showEditProfile = false  // true일때 상단에 오버레이를 펼친다.
     @State private var isLoggedOut = false
@@ -40,20 +34,6 @@ struct ProfileView: View {
                                 .foregroundStyle(.white)
                                 .clipped()
                         }
-                        //                    
-                        //                    if editMode {
-                        //                        Image(systemName: "pencil")
-                        //                            .resizable()
-                        //                            .padding()
-                        //                            .background(.black)
-                        //                            .foregroundStyle(.white)
-                        //                            .frame(width: 70, height: 70)
-                        //                            .containerShape(Circle())
-                        //                            .offset(x: -30, y: 10)
-                        //                            .onTapGesture {
-                        //                                showEditProfile.toggle()
-                        //                            }
-                        //                    }
                     }
                     HStack {
 //                        Text("Name :")
@@ -131,7 +111,7 @@ struct ProfileView: View {
                                     .background(.blue)
                                     .cornerRadius(10)
                                     .foregroundStyle(.white)
-                            }.buttonStyle(PlainButtonStyle()) // 🔹 기본 버튼 스타일 제거 (회색 배경 방지)
+                            }.buttonStyle(PlainButtonStyle()) // 기본 버튼 스타일 제거 (회색 배경 방지)
                         }
                         
                         Button {
@@ -148,7 +128,7 @@ struct ProfileView: View {
                                 .background(.red)
                                 .cornerRadius(10)
                                 .foregroundStyle(.white)
-                        }.buttonStyle(PlainButtonStyle()) // 🔹 기본 버튼 스타일 제거 (회색 배경 방지)
+                        }.buttonStyle(PlainButtonStyle()) // 기본 버튼 스타일 제거 (회색 배경 방지)
                         
                         Button {
                             AuthService.shared.signout()
@@ -160,7 +140,7 @@ struct ProfileView: View {
                                 .background(.black)
                                 .cornerRadius(10)
                                 .foregroundStyle(.white)
-                        }.buttonStyle(PlainButtonStyle()) // 🔹 기본 버튼 스타일 제거 (회색 배경 방지)
+                        }.buttonStyle(PlainButtonStyle()) // 기본 버튼 스타일 제거 (회색 배경 방지)
                         //                        Spacer()
                     }
                     .padding()
@@ -179,34 +159,6 @@ struct ProfileView: View {
 }
 
 
-//extension ProfileView {
-//    var ImageS: some View {
-//        TabView(selection: $currentIndex) {
-//            ForEach(0..<numberOfPages, id: \.self) { index in
-//                if let profileImageUrl = user.profileImageUrl,
-//                   let url = URL(string: profileImageUrl) {
-//                    KFImage(url)
-//                        .resizable()
-//                        .scaledToFill()
-//                        .frame(width: UIScreen.main.bounds.width, height: 350)
-//                        .clipped()
-//                        .tag(index)
-//                } else {
-//                    Image(systemName: "person.fill")
-//                        .resizable()
-//                        .scaledToFill()
-//                        .frame(width: UIScreen.main.bounds.width, height: 350)
-//                        .background(Color.gray)
-//                        .foregroundColor(.white)
-//                        .clipped()
-//                        .tag(index)
-//                }
-//            }
-//        }
-//        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-//        .frame(height: 350)
-//    }
-//}
 
 
 
@@ -216,17 +168,3 @@ struct ProfileView: View {
 }
 
 
-
-
-
-//                            Image(systemName: "pencil")
-//                                .resizable()
-//                                .padding()
-//                                .background(.black)
-//                                .foregroundStyle(.white)
-//                                .frame(width: 40, height: 70)
-//                                .containerShape(Circle())
-//                                .offset(x: 60, y:-5)
-//                                .onTapGesture {
-//                                    showEditProfile.toggle()
-//                                }

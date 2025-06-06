@@ -1,9 +1,3 @@
-//
-//  CommunityCreatePostViewModel.swift
-//  Pet
-//
-//  Created by 안재원 on 3/14/25.
-//
 
 import Foundation
 import UIKit
@@ -17,7 +11,7 @@ class CommunityCreatePostViewModel: ObservableObject {
     
     
     
-    // 게시글 작성
+    // MARK: 게시글 작성
     @MainActor
     func createPost(username: String, title: String, content: String, image: UIImage?, location: CLLocationCoordinate2D?) async {
         isLoading = true

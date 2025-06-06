@@ -1,9 +1,3 @@
-//
-//  EditProfileView.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
 
 import SwiftUI
 import PhotosUI
@@ -12,30 +6,20 @@ struct EditProfileView: View {
     
     @StateObject var viewModel: EditProfileViewModel
     
-    // 초기화 여기에 전달된 사용자로 편집 프로필ViewModel을 생성한다
+    
     // 초기의 데이터를 주기 위함.
     init(user: User) {
         self._viewModel = StateObject(wrappedValue: EditProfileViewModel(user: user))
     }
     
-    
-    ///```
-    /// SwiftUI의 고질적인 문제는 view를 다 넣으면 에러가난다. 하위뷰의 보유갯수는 10개정도로 예상됨.
-    /// 그래서 extions이나 struc로 구성
-    ///```
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
                 EditHeaderView()
-                
                 EditProfileImageView()
-                
                 EdiNameAgeView()
-                
                 EditBioView()
-                
                 EditPrerferenceView()
-                
                 EditInterestsView()
             }
         }
@@ -49,9 +33,9 @@ struct EditProfileView: View {
 
 
 
-///```
-///상단 Text Button
-///```
+
+// MARK: 상단 Text Button
+
 struct EditHeaderView: View {
     @EnvironmentObject var viewModel: EditProfileViewModel // 환경객체
     @Environment(\.dismiss) var dismiss
@@ -82,9 +66,8 @@ struct EditHeaderView: View {
 }
 
 
-///```
-/// 프로필 이미지
-///```
+
+// MARK: 프로필 이미지
 struct EditProfileImageView: View {
     @EnvironmentObject var viewModel: EditProfileViewModel // 환경객체
     
@@ -119,9 +102,9 @@ struct EditProfileImageView: View {
     }
 }
 
-///```
-///이름 수정
-///```
+
+// MARK: 이름 수정
+
 struct EdiNameAgeView: View {
     @EnvironmentObject var viewModel: EditProfileViewModel // 환경객체
     
@@ -148,9 +131,8 @@ struct EdiNameAgeView: View {
     }
 }
 
-///```
-///자기 소개 글
-///```
+
+// MARK: 자기 소개 글
 struct EditBioView: View {
     @EnvironmentObject var viewModel: EditProfileViewModel // 환경객체
     
@@ -171,9 +153,9 @@ struct EditBioView: View {
 }
 
 
-///```
-///성별 수정
-///```
+
+// MARK: 성별 수정
+
 struct EditPrerferenceView: View {
     @EnvironmentObject var viewModel: EditProfileViewModel // 환경객체
     
@@ -213,9 +195,8 @@ struct EditPrerferenceView: View {
     }
 }
 
-///```
-///관심분야 수정
-///```
+
+// MARK: 관심분야 수정
 struct EditInterestsView: View {
     @EnvironmentObject var viewModel: EditProfileViewModel // 환경객체
     

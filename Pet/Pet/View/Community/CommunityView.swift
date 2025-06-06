@@ -1,9 +1,4 @@
 
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
-
 import SwiftUI
 import PhotosUI
 import CoreLocation
@@ -71,11 +66,10 @@ struct CommunityView: View {
                     .background(Color.gray.opacity(0.2))
                     .clipShape(RoundedRectangle(cornerRadius: 8)) // 사각형 + 모서리 둥글게
             }
-                            .onAppear {
+                    .onAppear {
                                 Task {
                                     await viewModel.fetchPosts()
                                 }
-//                                viewModel.loadComments(for: boardId)
                             }
                         }
                     }
@@ -110,7 +104,7 @@ extension CommunityView {
                                         .font(.headline)
                                         .foregroundStyle(colorScheme == .dark ? .white : .black)
                                         .padding(.horizontal)
-//                                    Text("댓글 수: \(viewModel.commentCount)") // 🔹 이렇게 사용하면 정상 작동
+//                                    Text("댓글 수: \(viewModel.commentCount)") // 이렇게 사용하면 정상 작동
                                     Spacer()
                                 }
                                 Spacer()
@@ -153,7 +147,3 @@ extension CommunityView {
     }
 }
 
-
-//#Preview {
-//    CommunityView()
-//}

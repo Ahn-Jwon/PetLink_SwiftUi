@@ -14,10 +14,10 @@
             filePath = "Pet/ViewModel/BoardViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "fetchTodayPostCount()"
-            landmarkType = "7">
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "BoardViewModel"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "4AE80023-A709-4026-98F0-48D46A5F6196 - fb6633d101a40587"
@@ -60,10 +60,10 @@
             filePath = "Pet/ViewModel/BoardViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "fetchPosts()"
-            landmarkType = "7">
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "BoardViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -76,10 +76,10 @@
             filePath = "Pet/ViewModel/BoardViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "fetchPosts()"
-            landmarkType = "7">
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "BoardViewModel"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "08672F16-D9B2-433A-8337-71DB42D8ADF0 - 3ff7422ad7a69b28"
@@ -122,8 +122,8 @@
             filePath = "Pet/View/Board/CreatePostView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -138,8 +138,8 @@
             filePath = "Pet/View/Board/CreatePostView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>

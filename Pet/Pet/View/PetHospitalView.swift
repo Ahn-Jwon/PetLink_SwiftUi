@@ -1,9 +1,3 @@
-//
-//  PetHospitalView.swift
-//  Pet
-//
-//  Created by 안재원 on 3/9/25.
-//
 
 import SwiftUI
 import CoreLocation
@@ -18,9 +12,6 @@ struct PetHospitalListView: View {
 
     var body: some View {
         VStack {
-//            Text("Search for a Pet Hospital")
-//                .font(.title)
-//                .padding()
             HStack {
                 TextField("地域名で検索します", text: $searchQuery)
                     .textFieldStyle(RoundedBorderTextFieldStyle())

@@ -1,9 +1,3 @@
-
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
-
 import SwiftUI
 import PhotosUI
 import CoreLocation
@@ -11,8 +5,8 @@ import Kingfisher
   
 struct BoardView: View {
     @State  var searchText = ""
-    @StateObject  var viewModel = BoardViewModel()  // ViewModel 사용
-    private let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 1) // 2열 그리드
+    @StateObject  var viewModel = BoardViewModel()
+    private let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 1) 
     @StateObject  var lc = LocationManager()
     @Environment(\.colorScheme) var colorScheme
     

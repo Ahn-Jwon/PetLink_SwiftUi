@@ -1,15 +1,9 @@
-//
-//  RegisterBioView.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
 
 import SwiftUI
 
-///```
-///등록 소개
-///```
+
+// MARK: 등록 소개
+
 struct RegisterBioView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @Environment(\.dismiss) var dismiss                                  // 오버레이를 닫을 수 있다.

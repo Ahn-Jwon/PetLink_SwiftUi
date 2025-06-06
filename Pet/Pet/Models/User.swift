@@ -1,15 +1,9 @@
-//
-//  User.swift
-//  Pet
-//
-//  Created by 안재원 on 2/5/25.
-//
 
 import Foundation
 
 
 ///```
-///사용자 UserModel
+///사용자 UserModel SAMPLE DATA
 ///```
 struct User: Identifiable, Codable, Hashable {
     
