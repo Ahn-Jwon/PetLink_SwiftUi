@@ -6,3 +6,4 @@ let COLLERCTION_CHAT = "chat"
 let COLLERCTION_MESSAGES = "messages"
 let COLLERCTION_BOARD = "board"
 let COLLERCTION_COMMUNITY = "community"
+

@@ -73,7 +73,7 @@ class CommunityService: ObservableObject {
     // MARK: 구글 역지오코딩 API 사용하여 위치 좌표를 주소로 변환
     private func getAddress(from location: CLLocationCoordinate2D?) async throws -> String {
         guard let location = location else { return "위치 정보 없음" }
-        let apiKey = "AIzaSyDgkxrepywZneifmPOh7Nzq-q0-HcN8WJk" //  본인의 API 키 입력
+        let apiKey = ADRESS_API_KYE //  본인의 API 키 입력
         let urlString = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(location.latitude),\(location.longitude)&key=\(apiKey)"
         
         guard let url = URL(string: urlString) else { return "주소 변환 실패" }
