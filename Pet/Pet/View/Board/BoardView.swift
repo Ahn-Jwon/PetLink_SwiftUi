@@ -109,6 +109,8 @@ extension BoardView {
                                         .foregroundStyle(colorScheme == .dark ? .white : .black)
                                         .padding(.horizontal)
                                     Spacer()
+                                    
+                                    Text(item.username)
                                 }
                                 Spacer()
                                 HStack {

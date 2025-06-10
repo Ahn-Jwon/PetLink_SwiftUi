@@ -20,32 +20,32 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "4AE80023-A709-4026-98F0-48D46A5F6196 - fb6633d101a40587"
+                  uuid = "4AE80023-A709-4026-98F0-48D46A5F6196 - c7c93597b1e19be3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(4) suspend resume partial function for Pet.BoardViewModel.fetchTodayPostCount() async -&gt; ()"
                   moduleName = "Pet.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anjaewon/Desktop/Swift%20(Project)/Pet/Pet/Pet/ViewModel/BoardViewModel.swift"
+                  urlString = "file:///Users/anjaewon/Desktop/Swift%20(Project)/PetLink/PetLink/Pet/Pet/ViewModel/BoardViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57">
+                  startingLineNumber = "51"
+                  endingLineNumber = "51">
                </Location>
                <Location
-                  uuid = "4AE80023-A709-4026-98F0-48D46A5F6196 - fb6633d101a40587"
+                  uuid = "4AE80023-A709-4026-98F0-48D46A5F6196 - c7c93597b1e19be3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(4) suspend resume partial function for Pet.BoardViewModel.fetchTodayPostCount() async -&gt; ()"
                   moduleName = "Pet.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anjaewon/Desktop/Swift%20(Project)/Pet/Pet/Pet/ViewModel/BoardViewModel.swift"
+                  urlString = "file:///Users/anjaewon/Desktop/Swift%20(Project)/PetLink/PetLink/Pet/Pet/ViewModel/BoardViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57">
+                  startingLineNumber = "51"
+                  endingLineNumber = "51">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -82,32 +82,32 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "08672F16-D9B2-433A-8337-71DB42D8ADF0 - 3ff7422ad7a69b28"
+                  uuid = "08672F16-D9B2-433A-8337-71DB42D8ADF0 - 358446c67e33ec4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(4) suspend resume partial function for Pet.BoardViewModel.fetchPosts() async -&gt; ()"
                   moduleName = "Pet.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anjaewon/Desktop/Swift%20(Project)/Pet/Pet/Pet/ViewModel/BoardViewModel.swift"
+                  urlString = "file:///Users/anjaewon/Desktop/Swift%20(Project)/PetLink/PetLink/Pet/Pet/ViewModel/BoardViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32">
+                  startingLineNumber = "26"
+                  endingLineNumber = "26">
                </Location>
                <Location
-                  uuid = "08672F16-D9B2-433A-8337-71DB42D8ADF0 - 3ff7422ad7a69b28"
+                  uuid = "08672F16-D9B2-433A-8337-71DB42D8ADF0 - 358446c67e33ec4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(4) suspend resume partial function for Pet.BoardViewModel.fetchPosts() async -&gt; ()"
                   moduleName = "Pet.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anjaewon/Desktop/Swift%20(Project)/Pet/Pet/Pet/ViewModel/BoardViewModel.swift"
+                  urlString = "file:///Users/anjaewon/Desktop/Swift%20(Project)/PetLink/PetLink/Pet/Pet/ViewModel/BoardViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32">
+                  startingLineNumber = "26"
+                  endingLineNumber = "26">
                </Location>
             </Locations>
          </BreakpointContent>
