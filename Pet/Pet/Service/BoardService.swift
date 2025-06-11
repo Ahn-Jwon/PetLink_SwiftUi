@@ -20,6 +20,7 @@ class BoardService: ObservableObject {
         let userDocRef = db.collection("user").document(uid)
         let userSnapshot = try await userDocRef.getDocument()
         let username = userSnapshot.data()?["name"] as? String ?? "익명 사용자"
+        let profileImage = userSnapshot.data()?["profileImageUrl"] as? String ?? ""
 
         // 이미지 업로드 (Firebase Storage 사용)
         var imageUrl: String? = nil
@@ -31,9 +32,10 @@ class BoardService: ObservableObject {
         let address = try await getAddress(from: location)
 
         // Firestore에 저장할 데이터 준비
-        let postData: [String: Any] = [
+        let postData: [String: Any] = [ //여기
             "userId": uid,
             "username": username,
+            "profileIamge": profileImage,
             "title": title,
             "content": content,
             "imageUrl": imageUrl ?? "",
@@ -49,17 +51,19 @@ class BoardService: ObservableObject {
     }
     
     // MARK: Firestore에서 게시글 목록 가져오기
-    func fetchPosts() async throws -> [Board] {
+    func fetchPosts() async throws -> [Board] {  //
         let snapshot = try await db.collection(COLLERCTION_BOARD)
             .order(by: "timestamp", descending: true)
             .getDocuments()
         
         return snapshot.documents.compactMap { document in
             let data = document.data()
+            
             return Board(
                 id: document.documentID,
                 username: data["username"] as? String ?? "",
                 userId: data["userId"] as? String ?? "",
+                profileImage: data["profileIamge"] as? String ?? "",
                 title: data["title"] as? String ?? "",
                 content: data["content"] as? String ?? "",
                 imageUrl: data["imageUrl"] as? String,

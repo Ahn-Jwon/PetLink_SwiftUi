@@ -110,7 +110,21 @@ extension BoardView {
                                         .padding(.horizontal)
                                     Spacer()
                                     
-                                    Text(item.username)
+                                    HStack(spacing: 5) {
+                                        if let profileImage = item.profileImage, !profileImage.isEmpty {
+                                            KFImage(URL(string: profileImage))
+                                                .resizable()
+                                                .frame(width: 15, height: 15)
+                                                .containerShape(Circle())
+                                        } else {
+                                            Image(systemName: "pencil")
+                                                .resizable()
+                                                .frame(width: 15, height: 15)
+                                                .containerShape(Circle())
+                                        }
+                                        
+                                        Text(item.username)
+                                    }
                                 }
                                 Spacer()
                                 HStack {

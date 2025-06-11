@@ -16,8 +16,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "BoardViewModel"
-            landmarkType = "3">
+            landmarkName = "fetchTodayPostCount()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "4AE80023-A709-4026-98F0-48D46A5F6196 - c7c93597b1e19be3"
@@ -62,8 +62,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
-            landmarkName = "BoardViewModel"
-            landmarkType = "3">
+            landmarkName = "fetchPosts()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,8 +78,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "BoardViewModel"
-            landmarkType = "3">
+            landmarkName = "fetchPosts()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "08672F16-D9B2-433A-8337-71DB42D8ADF0 - 358446c67e33ec4"

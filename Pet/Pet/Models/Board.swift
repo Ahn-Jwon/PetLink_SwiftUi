@@ -6,6 +6,7 @@ struct Board: Identifiable, Codable {
     var id: String?
     var username: String
     var userId: String
+    var profileImage: String?
     var title: String
     var content: String
     var imageUrl: String? //  이미지 URL 저장 필드 추가
