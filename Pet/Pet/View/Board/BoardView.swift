@@ -64,14 +64,14 @@ struct BoardView: View {
                     .foregroundStyle(colorScheme == .dark ? .white : .black)
                     .clipShape(RoundedRectangle(cornerRadius: 8)) // 사각형 + 모서리 둥글게
             }
-                            .onAppear {
-                                Task {
-                                    await viewModel.fetchPosts()
-                                }
-                            }
+                    .onAppear {
+                        Task {
+                            await viewModel.fetchPosts()
                         }
                     }
                 }
+            }
+        }
 
 
 extension BoardView {
@@ -108,8 +108,7 @@ extension BoardView {
                                         .font(.headline)
                                         .foregroundStyle(colorScheme == .dark ? .white : .black)
                                         .padding(.horizontal)
-                                    Spacer()
-                                    
+                                         Spacer()
                                     HStack(spacing: 5) {
                                         if let profileImage = item.profileImage, !profileImage.isEmpty {
                                             KFImage(URL(string: profileImage))
@@ -122,7 +121,6 @@ extension BoardView {
                                                 .frame(width: 15, height: 15)
                                                 .containerShape(Circle())
                                         }
-                                        
                                         Text(item.username)
                                     }
                                 }

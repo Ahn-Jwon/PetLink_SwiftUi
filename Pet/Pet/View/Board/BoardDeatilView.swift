@@ -45,6 +45,19 @@ struct BoardDetailView: View {
                         Text(board.username)
                             .font(.body)
                             .foregroundColor(.gray)
+                        HStack(spacing: 5) {
+                            if let profileImage = board.profileImage, !profileImage.isEmpty {
+                                KFImage(URL(string: profileImage))
+                                    .resizable()
+                                    .frame(width: 15, height: 15)
+                                    .containerShape(Circle())
+                            } else {
+                                Image(systemName: "pencil")
+                                    .resizable()
+                                    .frame(width: 15, height: 15)
+                                    .containerShape(Circle())
+                            }
+                        }
                         Spacer()
                             .padding()
                     }
