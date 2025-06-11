@@ -113,8 +113,8 @@ extension BoardView {
                                         if let profileImage = item.profileImage, !profileImage.isEmpty {
                                             KFImage(URL(string: profileImage))
                                                 .resizable()
-                                                .frame(width: 15, height: 15)
-                                                .containerShape(Circle())
+                                                .frame(width: 20, height: 20)
+                                                .clipShape(Circle())
                                         } else {
                                             Image(systemName: "pencil")
                                                 .resizable()

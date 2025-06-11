@@ -40,24 +40,23 @@ struct BoardDetailView: View {
             VStack {
                 ScrollView {
                     HStack {
-                        Image(systemName: "dog.fill") // 사용자 아이콘 추가
-                            .foregroundColor(.black)
-                        Text(board.username)
-                            .font(.body)
-                            .foregroundColor(.gray)
                         HStack(spacing: 5) {
                             if let profileImage = board.profileImage, !profileImage.isEmpty {
                                 KFImage(URL(string: profileImage))
                                     .resizable()
-                                    .frame(width: 15, height: 15)
-                                    .containerShape(Circle())
+                                    .frame(width: 20, height: 20)
+                                    .clipShape(Circle())
                             } else {
                                 Image(systemName: "pencil")
                                     .resizable()
                                     .frame(width: 15, height: 15)
                                     .containerShape(Circle())
                             }
-                        }
+                        }   .padding(.horizontal)
+                            .foregroundColor(.black)
+                        Text(board.username)
+                            .font(.body)
+                            .foregroundColor(.black)
                         Spacer()
                             .padding()
                     }
